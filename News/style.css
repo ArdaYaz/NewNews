@@ -1,4 +1,11 @@
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
 *{  
     padding: 0;
     margin: 0;
@@ -23,18 +30,18 @@ a{
     display: flex;
     align-items: center;
     background-color: rgb(226, 226, 226);
-    height: 4rem;
+    height: 8rem;
     width: 100%;
     padding: 0 3%;
     z-index: 1000;
+    overflow-y: hidden;
 }
 header .top{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
 }
-header .top nav a{
+header .top .category a{
     margin-left: 2.2rem;
 }
 .top .logo img{
@@ -45,9 +52,44 @@ header .top nav a{
 .top .line{
     background-color: rgba(0,0,0,0.875);
     width: 0.09rem;
-    height: 3rem;
+    height: 4.2rem;
     margin-left: 2rem;
 }
-.top h1{
-    font-size:2.2rem;
+
+.top input {
+    background-color: rgba(0,0,0,0.075);
+    margin-left: 2rem;
+    padding: 6px;
+    margin-top: 0.3rem;
+    font-size: 17px;
 }
+.search-bar{
+    position: fixed;
+    right: 0;
+    margin-right: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-bar i{
+    background-color: rgba(0,0,0,0.075);
+    padding: 6px;
+    margin-top: 4px;
+    font-size: 20px;
+    cursor: pointer;    
+}
+
+
+/** Responsiveness Starts**/
+
+@media screen and (min-width: 1280px){
+    .name{
+        font-size: 2.2vw;
+    }
+    .category{
+        font-size: 1.8vw;
+    }
+}
+
+
+/** Responsiveness Ends**/
